@@ -9,20 +9,19 @@ function About() {
   return (
     <RootLayout>
       <NavbarComponent />
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 mb-[12rem]">
         <h1
           className={`${pacifico.className} text-4xl font-bold text-center my-6 mb-10`}
         >
           About Us
         </h1>
-        <div className="flex flex-wrap -mx-4">
+        <div className="flex flex-wrap mx-10">
           <div className="w-full md:w-1/2 px-4 mb-8">
             <Image
               src="/images/about-yumify.png"
               alt="About Us"
               width={500}
               height={300}
-              layout="responsive"
             />
           </div>
           <div className="w-full md:w-1/2 px-4">

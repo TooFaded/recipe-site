@@ -2,6 +2,7 @@ import RootLayout from "./layout";
 import { pacifico, inter } from "@/app/ui/fonts";
 import { Button } from "flowbite-react";
 import Image from "next/image";
+import Link from "next/link";
 import NavbarComponent from "@/app/ui/navbar";
 import FooterComponent from "@/app/ui/footer";
 
@@ -10,7 +11,7 @@ const Home = () => {
     <RootLayout>
       <NavbarComponent />
       {/* page content */}
-      <div className="h-screen flex flex-col justify-center items-center">
+      <div className="h-screen flex flex-col justify-center items-center mt-[-4rem]">
         <h1 className={`${inter.className} font-medium antialiased text-5xl`}>
           Welcome to{" "}
           <span
@@ -34,12 +35,14 @@ const Home = () => {
           className="mt-[-60px]"
         />
 
-        <Button
-          gradientDuoTone="pinkToOrange"
-          className={`${inter.className} antialiased font-bolder h-[4vh] `}
-        >
-          GET STARTED
-        </Button>
+        <Link href="/recipes">
+          <Button
+            gradientDuoTone="pinkToOrange"
+            className={`${inter.className} antialiased font-bolder h-[4vh] mt-[-4rem] `}
+          >
+            GET STARTED
+          </Button>
+        </Link>
       </div>
       <FooterComponent />
     </RootLayout>
