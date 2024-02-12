@@ -37,7 +37,7 @@ const Home = () => {
           <Link href="/recipes">
             <Button
               gradientDuoTone="pinkToOrange"
-              className={`${inter.className} antialiased font-bold h-[4vh] shadow-lg border-black `}
+              className={`${inter.className} antialiased font-bold h-[4vh] shadow-lg transition ease-in-out duration-400 hover:-translate-y-1 hover:scale-110   `}
             >
               GET STARTED
             </Button>

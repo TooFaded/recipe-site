@@ -15,6 +15,10 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      animation: {
+        slideInFromLeft: "slideInFromLeft 0.5s ease-out forwards",
+        slideInFromRight: "slideInFromRight 0.5s ease-out forwards",
+      },
     },
   },
   plugins: [require("flowbite/plugin")],
