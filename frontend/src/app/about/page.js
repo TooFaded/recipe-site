@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import RootLayout from "../layout";
-import NavbarComponent from "../ui/navbar";
-import FooterComponent from "../ui/footer";
-import { pacifico, inter } from "@/app/ui/fonts";
+import NavbarComponent from "../../../ui/navbar";
+import FooterComponent from "../../../ui/footer";
+import { pacifico, inter } from "@/ui/fonts";
 
 function About() {
   return (
@@ -22,6 +22,7 @@ function About() {
               alt="About Us"
               width={700}
               height={500}
+              className="rounded-xl shadow-xl"
             />
           </div>
           <div className="w-full md:w-1/2 px-4">

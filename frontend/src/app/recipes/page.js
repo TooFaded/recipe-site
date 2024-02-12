@@ -1,7 +1,7 @@
-import { pacifico, inter } from "@/app/ui/fonts";
-import RecipeCard from "../ui/recipeCard";
-import NavbarComponent from "@/app/ui/navbar";
-import FooterComponent from "@/app/ui/footer";
+import { pacifico, inter } from "@/ui/fonts";
+import RecipeCard from "../../../ui/recipeCard";
+import NavbarComponent from "@/ui/navbar";
+import FooterComponent from "@/ui/footer";
 import Link from "next/link";
 
 export async function getRecipes() {

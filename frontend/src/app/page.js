@@ -1,10 +1,10 @@
 import RootLayout from "./layout";
-import { pacifico, inter } from "@/app/ui/fonts";
+import { pacifico, inter } from "@/ui/fonts";
 import { Button } from "flowbite-react";
 import Image from "next/image";
 import Link from "next/link";
-import NavbarComponent from "@/app/ui/navbar";
-import FooterComponent from "@/app/ui/footer";
+import NavbarComponent from "@/ui/navbar";
+import FooterComponent from "@/ui/footer";
 
 const Home = () => {
   return (
