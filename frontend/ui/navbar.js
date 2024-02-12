@@ -1,5 +1,4 @@
 import { pacifico } from "@/ui/fonts";
-import styles from "../src/app/globals.css";
 import Image from "next/image";
 import {
   Avatar,
@@ -10,7 +9,6 @@ import {
   Navbar,
   NavbarBrand,
   NavbarCollapse,
-  NavbarLink,
   NavbarToggle,
 } from "flowbite-react";
 
@@ -19,7 +17,7 @@ import Link from "next/link";
 export default function NavbarComponent() {
   return (
     <Navbar fluid rounded>
-      <NavbarBrand href="/">
+      <NavbarBrand href="/" className="mr-[-8rem]">
         <Image
           src="/images/yumify-logo-removebg.png"
           alt="Yumify Logo"
