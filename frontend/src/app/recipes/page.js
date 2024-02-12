@@ -1,11 +1,11 @@
-//import my fonts
 import { pacifico, inter } from "@/app/ui/fonts";
 import RecipeCard from "../ui/recipeCard";
 import NavbarComponent from "@/app/ui/navbar";
 import FooterComponent from "@/app/ui/footer";
+import Link from "next/link";
 
 export async function getRecipes() {
-  const apiKey = process.env.SPOONACULAR_API_KEY;
+  const apiKey = process.env.NEXT_PUBLIC_SPOONACULAR_API_KEY;
   const res = await fetch(
     `https://api.spoonacular.com/recipes/random?number=24&apiKey=${apiKey}`
   );
@@ -31,9 +31,14 @@ export default async function RandomRecipes() {
         }}
       >
         {recipes.map((recipe) => (
-          <RecipeCard key={recipe.id} recipe={recipe} />
+          <Link key={recipe.id} href={`/recipes/${recipe.id}`} passHref>
+            <div>
+              <RecipeCard recipe={recipe} />
+            </div>
+          </Link>
         ))}
       </div>
+
       <FooterComponent />
     </div>
   );

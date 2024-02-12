@@ -17,7 +17,7 @@ export default function RecipeCard({ recipe }) {
     recipe.spoonacularScore
   );
   return (
-    <div className="m-2.5 border border-gray-300 shadow-md rounded-lg p-3.5 w-72 bg-white flex flex-col items-center justify-between overflow-hidden">
+    <div className="m-2.5 border border-gray-300 shadow-md rounded-lg p-3.5 w-72 bg-white flex flex-col items-center justify-between h-[24rem] overflow-hidden">
       <img
         src={recipe.image || placeholderImage}
         alt={recipe.title}

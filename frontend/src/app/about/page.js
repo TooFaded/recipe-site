@@ -20,8 +20,8 @@ function About() {
             <Image
               src="/images/about-yumify.png"
               alt="About Us"
-              width={500}
-              height={300}
+              width={700}
+              height={500}
             />
           </div>
           <div className="w-full md:w-1/2 px-4">
