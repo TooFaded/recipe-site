@@ -56,13 +56,19 @@ export default function NavbarComponent() {
       </div>
 
       <NavbarCollapse>
-        <Link href="/" className="hover:text-red-600">
+        <Link href="/" className="text-black hover:text-orange-600 text-base ">
           Home
         </Link>
-        <Link href="/about" className="hover:text-red-600" base>
+        <Link
+          href="/about"
+          className="text-black hover:text-orange-600 text-base"
+        >
           About
         </Link>
-        <Link href="/recipes" className="hover:text-red-600" base>
+        <Link
+          href="/recipes"
+          className="text-black hover:text-orange-600 text-base"
+        >
           Recipes
         </Link>
       </NavbarCollapse>

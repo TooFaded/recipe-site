@@ -1,20 +1,13 @@
 import { pacifico, inter } from "@/ui/fonts";
+import { getRecipes } from "../../../lib/fetchRecipes";
 import RecipeCard from "../../../ui/recipeCard";
 import NavbarComponent from "@/ui/navbar";
 import FooterComponent from "@/ui/footer";
 import Link from "next/link";
 
-export async function getRecipes() {
-  const apiKey = process.env.NEXT_PUBLIC_SPOONACULAR_API_KEY;
-  const res = await fetch(
-    `https://api.spoonacular.com/recipes/random?number=24&apiKey=${apiKey}`
-  );
-  return res.json();
-}
-
 export default async function RandomRecipes() {
   const data = await getRecipes();
-  const recipes = data.recipes; // Assuming the API returns an array of one recipe
+  const recipes = data.recipes;
 
   return (
     <div>

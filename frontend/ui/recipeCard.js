@@ -1,5 +1,6 @@
 import { IoStarSharp, IoStarHalfSharp, IoStarOutline } from "react-icons/io5";
 import { FaRegClock } from "react-icons/fa";
+import { lato } from "@/ui/fonts";
 
 const placeholderImage = "/images/image-placeholder.png";
 
@@ -23,7 +24,7 @@ export default function RecipeCard({ recipe }) {
         alt={recipe.title}
         className="w-full h-52 rounded-lg"
       />
-      <h2 className="font-bold p-1">{recipe.title}</h2>
+      <h2 className={`${lato.className} font-bold p-1`}>{recipe.title}</h2>
       <div className="flex text-yellow-300">
         {[...Array(fullStars)].map((_, index) => (
           <IoStarSharp key={`full-${index}`} />

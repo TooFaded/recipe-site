@@ -11,7 +11,7 @@ function About() {
       <NavbarComponent />
       <div className="container mx-auto px-4 mb-[12rem]">
         <h1
-          className={`${pacifico.className} text-4xl font-bold text-center my-6 mb-10`}
+          className={`${pacifico.className} text-4xl font-bold text-center my-6 mb-10 drop-shadow-md`}
         >
           About Us
         </h1>
