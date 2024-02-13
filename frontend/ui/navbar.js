@@ -23,6 +23,7 @@ export default function NavbarComponent() {
           alt="Yumify Logo"
           width={75}
           height={75}
+          className="sm:block hidden"
         />
         <span className={`${pacifico.className} text-black text-2xl`}>
           Yumify
@@ -36,6 +37,7 @@ export default function NavbarComponent() {
             <Avatar
               alt="User settings"
               img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+              className="pr-1"
               rounded
             />
           }
@@ -55,13 +57,13 @@ export default function NavbarComponent() {
         <NavbarToggle />
       </div>
 
-      <NavbarCollapse>
+      <NavbarCollapse className="text-center">
         <Link href="/" className="text-black hover:text-orange-600 text-base ">
           Home
         </Link>
         <Link
           href="/about"
-          className="text-black hover:text-orange-600 text-base"
+          className="text-black hover:text-orange-600 text-base "
         >
           About
         </Link>

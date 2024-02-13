@@ -1,38 +1,13 @@
-"use client";
+// "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { fetchRecipeById } from "../../../../lib/fetchRecipes";
 
-export default function RecipeDetailsPage() {
-  const pathname = usePathname();
-  const [searchParams] = useSearchParams();
-  const [recipe, setRecipe] = useState(null);
+export default async function RecipeDetailsPage({ params }) {
+  const recipe = await fetchRecipeById(params.id);
+  recipe.summary = recipe.summary.replace(/\n/g, "<br />");
 
-  useEffect(() => {
-    const recipeId = pathname.split("/").pop();
-    const apiKey = process.env.NEXT_PUBLIC_SPOONACULAR_API_KEY;
-    console.log("Fetching recipe with id:", recipeId);
-    console.log("API Key:", apiKey);
-    console.log("Current pathname:", pathname);
-    console.log("Current searchParams:", searchParams);
-
-    const fetchRecipeById = async () => {
-      try {
-        const response = await fetch(
-          `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}`
-        );
-        const data = await response.json();
-        console.log("Fetched data:", data);
-        setRecipe(data);
-      } catch (error) {
-        console.error("Failed to fetch recipe:", error);
-      }
-    };
-
-    if (recipeId) fetchRecipeById();
-  }, [pathname, searchParams]);
-
+  console.log(recipe);
   if (!recipe) return <p>Loading...</p>;
 
   return (
@@ -50,7 +25,7 @@ export default function RecipeDetailsPage() {
           <Image
             src={recipe.image}
             alt={recipe.title}
-            width={100}
+            width={120}
             height={100}
             className="w-full max-w-md mb-4"
           />

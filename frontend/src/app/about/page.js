@@ -16,12 +16,12 @@ function About() {
           About Us
         </h1>
         <div className="flex flex-wrap mx-10">
-          <div className="w-full md:w-1/2 px-4 mb-8 animate-slideInFromLeft">
+          <div className="w-full md:w-1/2 px-6 mb-8 animate-slideInFromLeft">
             <Image
               src="/images/about-yumify.png"
               alt="About Us"
-              width={700}
-              height={500}
+              width={600}
+              height={400}
               className="rounded-xl shadow-xl "
             />
           </div>

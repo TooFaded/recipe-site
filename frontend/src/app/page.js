@@ -14,10 +14,10 @@ const Home = () => {
         style={{ backgroundImage: "url('/images/yumify-hero-image.png')" }}
         className=" relative h-screen bg-cover bg-center opacity-95"
       >
-        <div className="absolute inset-0 bg-black opacity-30 z-0"></div>
+        <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
         <div className="relative z-20 flex flex-col justify-center items-center h-screen">
           <h1
-            className={`${lato.className} font-medium antialiased md:text-7xl text-5xl text-white`}
+            className={`${lato.className} font-medium antialiased md:text-7xl text-5xl text-white text-center`}
           >
             Welcome to{" "}
             <span
@@ -28,9 +28,10 @@ const Home = () => {
             !
           </h1>
           <p
-            className={`${lato.className} font-light sm:mx-10 my-4 text-base md:text-xl lg:mx-6 lg:my-8 mx-[3rem] text-white`}
+            className={`${lato.className} font-light text-center px-10 my-4 sm:text-base text-sm md:text-xl lg:mx-6 lg:my-8 text-white`}
           >
             Save your favorites, share your creations, and enjoy a world of
+            <br className="sm:block hidden" />
             flavors with Yumify – where your ingredients meet imagination!"
           </p>
 
