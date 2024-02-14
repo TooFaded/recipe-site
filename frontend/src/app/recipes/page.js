@@ -10,22 +10,13 @@ export default async function RandomRecipes() {
   const recipes = data.recipes;
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <NavbarComponent />
 
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          gap: "20px",
-          padding: "10px",
-          marginTop: "20px",
-        }}
-      >
+      <div className="flex flex-wrap justify-center gap-2 p-5 mt-5">
         {recipes.map((recipe) => (
           <Link key={recipe.id} href={`/recipes/${recipe.id}`} passHref>
-            <div>
+            <div className="w-full sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/6 p-4">
               <RecipeCard recipe={recipe} />
             </div>
           </Link>
