@@ -16,7 +16,7 @@ export default async function RandomRecipes() {
       <div className="flex flex-wrap justify-center gap-2 p-5 mt-5">
         {recipes.map((recipe) => (
           <Link key={recipe.id} href={`/recipes/${recipe.id}`} passHref>
-            <div className="w-full sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/6 p-4">
+            <div className="w-full sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/6 px-2">
               <RecipeCard recipe={recipe} />
             </div>
           </Link>

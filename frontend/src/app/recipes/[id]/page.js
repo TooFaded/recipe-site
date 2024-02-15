@@ -5,9 +5,7 @@ import { fetchRecipeById } from "../../../../lib/fetchRecipes";
 
 export default async function RecipeDetailsPage({ params }) {
   const recipe = await fetchRecipeById(params.id);
-  recipe.summary = recipe.summary.replace(/\n/g, "<br />");
 
-  console.log(recipe);
   if (!recipe) return <p>Loading...</p>;
 
   return (
@@ -40,7 +38,6 @@ export default async function RecipeDetailsPage({ params }) {
               className="prose max-w-none text-gray-600"
               dangerouslySetInnerHTML={{ __html: recipe.summary }}
             />
-            {/* Consider adding more details here */}
           </div>
         </div>
       </div>

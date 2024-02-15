@@ -11,8 +11,7 @@ import {
   NavbarCollapse,
   NavbarToggle,
 } from "flowbite-react";
-
-import Link from "next/link";
+import NavLink from "./nav-link";
 
 export default function NavbarComponent() {
   return (
@@ -58,21 +57,9 @@ export default function NavbarComponent() {
       </div>
 
       <NavbarCollapse className="text-center">
-        <Link href="/" className="text-black hover:text-orange-600 text-base ">
-          Home
-        </Link>
-        <Link
-          href="/about"
-          className="text-black hover:text-orange-600 text-base "
-        >
-          About
-        </Link>
-        <Link
-          href="/recipes"
-          className="text-black hover:text-orange-600 text-base"
-        >
-          Recipes
-        </Link>
+        <NavLink href="/">Home</NavLink>
+        <NavLink href="/about">About</NavLink>
+        <NavLink href="/recipes">Recipes</NavLink>
       </NavbarCollapse>
     </Navbar>
   );

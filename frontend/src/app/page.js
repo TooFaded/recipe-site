@@ -31,8 +31,8 @@ const Home = () => {
             className={`${lato.className} font-light text-center px-10 my-4 sm:text-base text-sm md:text-xl lg:mx-6 lg:my-8 text-white`}
           >
             Save your favorites, share your creations, and enjoy a world of
-            <br className="sm:block hidden" />
-            flavors with Yumify – where your ingredients meet imagination!"
+            <br className="sm:block hidden" /> flavors with Yumify – where your
+            ingredients meet imagination!"
           </p>
 
           <Link href="/recipes">
