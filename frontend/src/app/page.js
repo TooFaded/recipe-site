@@ -2,18 +2,27 @@ import RootLayout from "./layout";
 import { pacifico, inter, lato } from "@/ui/fonts";
 import { Button } from "flowbite-react";
 import Link from "next/link";
+import Image from "next/image";
 import NavbarComponent from "@/ui/navbar";
 import FooterComponent from "@/ui/footer";
 
 const Home = () => {
   return (
-    <RootLayout>
+    <>
       <NavbarComponent className="z-10" />
 
-      <div
-        style={{ backgroundImage: "url('/images/yumify-hero-image.png')" }}
-        className=" relative h-screen bg-cover bg-center opacity-95"
-      >
+      <div className=" relative h-screen ">
+        <Image
+          src="/images/yumify-hero-image.png"
+          alt="Hero Image"
+          style={{
+            objectFit: "cover",
+            objectPosition: "center",
+          }}
+          sizes="(max-width: 640px) 100vw, 50vw"
+          fill
+          priority
+        />
         <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
         <div className="relative z-20 flex flex-col justify-center items-center h-screen">
           <h1
@@ -46,7 +55,7 @@ const Home = () => {
         </div>
       </div>
       <FooterComponent />
-    </RootLayout>
+    </>
   );
 };
 

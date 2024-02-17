@@ -7,7 +7,7 @@ import { pacifico, inter } from "@/ui/fonts";
 
 function About() {
   return (
-    <RootLayout>
+    <>
       <NavbarComponent />
       <div className="container mx-auto px-4 mb-[12rem]">
         <h1
@@ -23,6 +23,7 @@ function About() {
               width={800}
               height={600}
               className="rounded-xl shadow-xl "
+              priority
             />
           </div>
           <div className="w-full md:w-1/2 sm:px-4 px-0  animate-slideInFromRight">
@@ -55,7 +56,7 @@ function About() {
         </div>
       </div>
       <FooterComponent />
-    </RootLayout>
+    </>
   );
 }
 

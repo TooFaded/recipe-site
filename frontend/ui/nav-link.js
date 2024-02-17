@@ -5,7 +5,6 @@ import Link from "next/link";
 
 export default function NavLink({ href, children }) {
   const pathname = usePathname();
-  console.log("pathname:", pathname);
 
   const isLinkActive = (href, pathname) => {
     if (href === "/") return pathname === href;

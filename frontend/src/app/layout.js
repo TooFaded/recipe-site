@@ -5,7 +5,7 @@ export default function RootLayout({ children, modal }) {
     <html lang="en">
       <body>
         {children}
-        {modal}
+        {/* {modal} */}
       </body>
     </html>
   );
