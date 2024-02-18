@@ -14,10 +14,10 @@ export default async function Modal({ params }) {
 
   return (
     <RecipeModal>
-      <div className="container mx-auto max-w-3xl px-4">
+      <div className="container mx-auto max-w-3xl px-4 ">
         <div className="text-center"></div>
-        <div className="bg-white shadow-lg rounded-lg sm:h-full  overflow-hidden">
-          <div className="relative h-56 md:h-96 w-full overflow-hidden">
+        <div className="bg-white shadow-lg rounded-lg sm:h-full max-h-[90vh] overflow-hidden">
+          <div className="relative sm:h-56 h-28 md:h-96 w-full overflow-hidden">
             <Image
               src={recipe.image}
               alt={recipe.title}
@@ -28,14 +28,14 @@ export default async function Modal({ params }) {
               className="transition-transform duration-500 hover:scale-105"
             />
           </div>
-          <div className="p-4 md:p-8">
+          <div className="p-4 md:p-8 ">
             <h1
-              className={`${lato.className} text-xl md:text-3xl font-bold mb-4`}
+              className={`${lato.className} sm:text-xl text-base md:text-3xl font-bold mb-4`}
             >
               {recipe.title}
             </h1>
             <div
-              className="prose prose-sm md:prose-base max-w-none text-gray-600"
+              className="prose prose-sm md:prose-base sm:text-xl text-xs max-w-none text-gray-600"
               dangerouslySetInnerHTML={{ __html: recipe.summary }}
             ></div>
             <ViewButton recipeId={params.id} />

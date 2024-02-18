@@ -28,7 +28,7 @@ export default async function RecipeInstructions({ params }) {
         >
           ← Back to recipes
         </Link>
-        <div className="prose flex items-center justify-between flex-col px-20 lg:prose-xl max-w-none bg-white shadow rounded-lg p-6">
+        <div className="prose flex items-center justify-between flex-col sm:px-20 px-10 lg:prose-xl max-w-none bg-white shadow rounded-lg p-6">
           <h1
             className={`${pacifico.className} text-4xl md:text-5xl font-bold text-gray-800 mb-6 text-center drop-shadow-lg`}
           >
@@ -49,7 +49,7 @@ export default async function RecipeInstructions({ params }) {
               <h2 className={`${lato.className} text-2xl font-bold pt-4`}>
                 Ingredients
               </h2>
-              <ul className="list-disc pl-5 mb-4">
+              <ul className="list-disc pl-5 mb-4 bg-yellow-100 rounded-lg p-1">
                 {recipe.extendedIngredients.map((ingredient, index) => (
                   <li key={index} className={`${lato.className} text-gray-700`}>
                     {renderIngredient(ingredient)}
@@ -60,11 +60,11 @@ export default async function RecipeInstructions({ params }) {
           </div>
 
           <div
-            className="prose lg:prose-xl text-lg max-w-none bg-white shadow rounded-lg p-4"
-            style={{ listStyleType: "decimal" }} // Inline style for debugging
+            className="prose lg:prose-xl sm:text-lg text-base max-w-none bg-white shadow rounded-lg sm:p-4 p-0"
+            // Inline style for debugging
             dangerouslySetInnerHTML={{ __html: sanitizedInstructions }}
           />
-          <p className="p-2">Ready in {recipe.readyInMinutes} mins</p>
+          <p className="p-4">Ready in {recipe.readyInMinutes} mins</p>
         </div>
       </div>
       <FooterComponent />
