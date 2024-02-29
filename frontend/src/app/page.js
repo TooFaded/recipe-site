@@ -41,7 +41,7 @@ const Home = () => {
           >
             Save your favorites, share your creations, and enjoy a world of
             <br className="sm:block hidden" /> flavors with Yumify – where your
-            ingredients meet imagination!"
+            ingredients meet imagination!
           </p>
 
           <Link href="/recipes">
