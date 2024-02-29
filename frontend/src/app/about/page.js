@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import RootLayout from "../layout";
+
 import NavbarComponent from "../../../ui/navbar";
 import FooterComponent from "../../../ui/footer";
 import { pacifico, inter } from "@/ui/fonts";
@@ -40,7 +40,7 @@ function About() {
             </p>
             <p className="text-sm sm:text-2xl font-light">
               We believe that cooking should be accessible and enjoyable for
-              everyone. That's why our recipes range from quick and easy meals
+              everyone. That is why our recipes range from quick and easy meals
               to elaborate and exotic dishes, ensuring there's something for
               every taste and skill level.
             </p>
