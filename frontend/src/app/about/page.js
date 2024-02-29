@@ -45,7 +45,7 @@ function About() {
               every taste and skill level.
             </p>
           </div>
-          <div className="mt-10 mb-[-6rem]  w-full flex justify-center items-start sm:items-center ">
+          <div className="mt-10 mb-[-6rem]  w-full flex justify-center items-start sm:items-center">
             <Image
               src="/images/yumify-mascot-image.png"
               alt="Yumify Mascot"
