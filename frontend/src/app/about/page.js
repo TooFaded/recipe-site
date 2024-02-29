@@ -41,7 +41,7 @@ function About() {
             <p className="text-sm sm:text-2xl font-light">
               We believe that cooking should be accessible and enjoyable for
               everyone. That is why our recipes range from quick and easy meals
-              to elaborate and exotic dishes, ensuring there's something for
+              to elaborate and exotic dishes, ensuring there is something for
               every taste and skill level.
             </p>
           </div>
