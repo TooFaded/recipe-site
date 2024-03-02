@@ -5,6 +5,8 @@ import NavbarComponent from "@/ui/navbar";
 import FooterComponent from "@/ui/footer";
 import Link from "next/link";
 
+export const revalidate = 86400;
+
 export default async function RandomRecipes() {
   const data = await getRecipes();
   const recipes = data.recipes;
