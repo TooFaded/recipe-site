@@ -22,11 +22,11 @@ function About() {
               alt="About Us"
               width={800}
               height={600}
-              className="rounded-xl shadow-xl "
+              className="rounded-xl shadow-xl"
               priority
             />
           </div>
-          <div className="w-full md:w-1/2 sm:px-4 px-0  animate-slideInFromRight">
+          <div className="w-full md:w-1/2 sm:px-4 px-0 animate-slideInFromRight">
             <p className="text-sm sm:text-2xl font-light">
               Welcome to Yumify, the ultimate destination for culinary
               enthusiasts! We are dedicated to sharing delicious recipes,
@@ -45,7 +45,7 @@ function About() {
               every taste and skill level.
             </p>
           </div>
-          <div className="mt-10 mb-[-6rem]  w-full flex justify-center items-start sm:items-center">
+          <div className="mt-10 mb-[-6rem] w-full flex justify-center items-start sm:items-center">
             <Image
               src="/images/yumify-mascot-image.png"
               alt="Yumify Mascot"
