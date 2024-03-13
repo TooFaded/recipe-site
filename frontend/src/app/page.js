@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <NavbarComponent className="z-10" />
 
-      <div className=" relative h-screen ">
+      <div className="relative h-screen">
         <Image
           src="/images/yumify-hero-image.png"
           alt="Hero Image"
@@ -24,7 +24,7 @@ const Home = () => {
           priority
         />
         <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
-        <div className="relative z-20 flex flex-col justify-center items-center h-screen">
+        <div className="relative z-20 flex flex-col justify-center items-center h-screen px-[1rem]">
           <h1
             className={`${lato.className} font-medium antialiased md:text-7xl text-5xl text-white text-center`}
           >
