@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default async function RecipeInstructions({ params }) {
   const recipe = await fetchRecipeById(params.id);
-  console.log(params.id);
+
   if (!recipe) {
     return <p>Recipe not found or loading...</p>;
   }

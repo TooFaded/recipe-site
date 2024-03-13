@@ -16,7 +16,7 @@ export default async function Modal({ params }) {
     <RecipeModal>
       <div className="container mx-auto max-w-3xl px-4 ">
         <div className="text-center"></div>
-        <div className="bg-white shadow-lg rounded-lg sm:h-full max-h-[90vh] overflow-hidden">
+        <div className="bg-white sm:h-full sm:max-h-[80vh] overflow-auto-y">
           <div className="relative sm:h-56 h-28 md:h-96 w-full overflow-hidden">
             <Image
               src={recipe.image}
