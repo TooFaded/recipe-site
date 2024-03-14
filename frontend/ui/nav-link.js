@@ -15,7 +15,7 @@ export default function NavLink({ href, children }) {
     <Link
       href={href}
       className={`${
-        lato.className // Applying the Lato font class
+        lato.className
       } font-base text-black hover:text-white hover:bg-gradient-to-r from-pink-500 to-orange-400 ${
         isLinkActive(href, pathname)
           ? "text-white bg-gradient-to-r from-pink-500 to-orange-400"

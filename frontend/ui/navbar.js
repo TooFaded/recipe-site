@@ -1,4 +1,6 @@
 import { pacifico } from "@/ui/fonts";
+import { FaSearch } from "react-icons/fa";
+import Link from "next/link";
 import Image from "next/image";
 import {
   Avatar,
@@ -28,6 +30,7 @@ export default function NavbarComponent() {
           Yumify
         </span>
       </NavbarBrand>
+
       <div className="flex md:order-2">
         <Dropdown
           arrowIcon={false}
@@ -60,6 +63,17 @@ export default function NavbarComponent() {
         <NavLink href="/">Home</NavLink>
         <NavLink href="/about">About</NavLink>
         <NavLink href="/recipes">Recipes</NavLink>
+        <Link
+          className="block md:hidden font-base text-black hover:text-white hover:bg-gradient-to-r from-pink-500 to-orange-400 text-xl rounded-lg p-1 px-2"
+          href="/search"
+        >
+          Search
+        </Link>
+        <div className="hidden md:block text-xl cursor-pointer mt-1 hover:scale-125">
+          <Link href="/search">
+            <FaSearch />
+          </Link>
+        </div>
       </NavbarCollapse>
     </Navbar>
   );
