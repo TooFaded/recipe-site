@@ -25,6 +25,7 @@ export default function NavbarComponent() {
           width={75}
           height={75}
           className="sm:block hidden"
+          priority
         />
         <span className={`${pacifico.className} text-black text-2xl`}>
           Yumify
@@ -62,7 +63,7 @@ export default function NavbarComponent() {
       <NavbarCollapse className="text-center">
         <NavLink href="/">Home</NavLink>
         <NavLink href="/about">About</NavLink>
-        <NavLink href="/recipes">Recipes</NavLink>
+        <NavLink href="/recipes">Discover</NavLink>
         <Link
           className="block md:hidden font-base text-black hover:text-white hover:bg-gradient-to-r from-pink-500 to-orange-400 text-xl rounded-lg p-1 px-2"
           href="/search"
