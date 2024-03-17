@@ -18,7 +18,7 @@ import NavLink from "./nav-link";
 export default function NavbarComponent() {
   return (
     <Navbar fluid rounded>
-      <NavbarBrand href="/" className="mr-[-8rem]">
+      <NavbarBrand href="/">
         <Image
           src="/images/yumify-logo-removebg.png"
           alt="Yumify Logo"
@@ -40,7 +40,7 @@ export default function NavbarComponent() {
             <Avatar
               alt="User settings"
               img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-              className="pr-1 hidden"
+              className="pr-1 hidden sm:hidden"
               rounded
             />
           }
