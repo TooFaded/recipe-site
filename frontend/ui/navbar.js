@@ -40,7 +40,7 @@ export default function NavbarComponent() {
             <Avatar
               alt="User settings"
               img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-              className="pr-1"
+              className="pr-1 hidden"
               rounded
             />
           }
