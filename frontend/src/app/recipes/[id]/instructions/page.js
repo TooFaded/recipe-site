@@ -4,7 +4,7 @@ import Image from "next/image";
 import NavbarComponent from "@/ui/navbar";
 import FooterComponent from "@/ui/footer";
 import DOMPurify from "isomorphic-dompurify";
-import Link from "next/link";
+import BackButton from "@/ui/backButton";
 
 export default async function RecipeInstructions({ params }) {
   const recipe = await fetchRecipeById(params.id);
@@ -22,12 +22,7 @@ export default async function RecipeInstructions({ params }) {
     <>
       <NavbarComponent />
       <div className="bg-gray-100 flex flex-col justify-center container mx-auto pt-4 pb-10 max-w-4xl px-4 mb-[12rem]">
-        <Link
-          href="/recipes"
-          className="text-lg text-center p-2 font-semibold text-sky-600 hover:text-sky-700 transition duration-300 ease-in-out cursor-pointer"
-        >
-          ← Back to recipes
-        </Link>
+        <BackButton />
         <div className="prose flex items-center justify-between flex-col sm:px-20 px-10 lg:prose-xl max-w-none bg-white shadow rounded-lg p-6">
           <h1
             className={`${pacifico.className} text-4xl md:text-5xl font-bold text-gray-800 mb-6 text-center drop-shadow-lg`}

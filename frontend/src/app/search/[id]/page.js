@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ViewButton from "@/ui/viewButton";
 import Image from "next/image";
+
 import { lato } from "@/ui/fonts";
 import { fetchRecipeById } from "../../../../lib/fetchRecipes";
 
@@ -12,11 +13,14 @@ export default async function RecipeDetailsPage({ params }) {
   return (
     <section className="py-12 lg:py-24 bg-gray-50">
       <div className="container mx-auto max-w-3xl px-4">
-        <Link href="/recipes">
-          <h3 className="text-lg text-center font-semibold text-sky-600 hover:text-sky-700 transition duration-300 ease-in-out">
-            ← Back to recipes
-          </h3>
-        </Link>
+        <div className="text-center">
+          <Link
+            className="text-lg font-semibold text-sky-600 hover:text-sky-700 transition duration-300 ease-in-out"
+            href="/search"
+          >
+            ←Back to search
+          </Link>
+        </div>
         <div className="text-center"></div>
         <div className="bg-white shadow-lg rounded-lg sm:h-full  overflow-hidden">
           <div className="relative h-56 md:h-96 w-full overflow-hidden">

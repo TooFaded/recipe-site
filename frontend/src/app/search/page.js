@@ -1,6 +1,8 @@
 "use client";
-import { useState } from "react";
-import { searchRecipes } from "../../../lib/fetchRecipes";
+import { useState, useEffect } from "react";
+import { fetchRecipeById, searchRecipes } from "../../../lib/fetchRecipes";
+import Link from "next/link";
+import RecipeCard from "@/ui/recipeCard";
 import NavbarComponent from "@/ui/navbar";
 import FooterComponent from "@/ui/footer";
 import SearchBar from "@/ui/searchBar";
@@ -10,35 +12,50 @@ export default function Search() {
   const [hasSearched, setHasSearched] = useState(false);
 
   const handleSearch = async (query) => {
-    const results = await searchRecipes(query);
+    // Initial search to get recipes based on query
+    const initialResults = await searchRecipes(query);
     setHasSearched(true);
-    if (results && results.results) {
-      setRecipes(results.results); // Assuming the API returns an object with a `results` array
+
+    // Check if the initialResults contains a `results` property with an array
+    if (initialResults && initialResults.results) {
+      // Fetch detailed information for each recipe
+      const detailedRecipes = await Promise.all(
+        initialResults.results.map(async (recipe) => {
+          // Assuming `fetchRecipeById` is designed to handle error gracefully and return null in case of failure
+          const detailedInfo = await fetchRecipeById(recipe.id);
+          return detailedInfo ? detailedInfo : recipe; // Fallback to initial recipe info if detailed fetch fails
+        })
+      );
+
+      // Update state with the detailed recipes
+      setRecipes(detailedRecipes);
     } else {
-      // Handle the case where no results are found or an error occurs
+      // Handle the case where no initial results are found or an error occurs
       setRecipes([]);
     }
   };
+
+  useEffect(() => {
+    console.log(recipes);
+  }, [recipes]);
 
   return (
     <>
       <NavbarComponent />
       <SearchBar onSearch={handleSearch} />
-      <main className="h-screen flex flex-col items-center">
+      <main className="min-h-screen flex flex-col items-center">
         <div className="mt-8 w-full px-4">
           {hasSearched ? (
             recipes.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="flex flex-wrap justify-center gap-2 p-5 mt-5">
                 {recipes.map((recipe) => (
-                  <div key={recipe.id} className="border rounded-lg p-4">
-                    <h3 className="font-semibold">{recipe.title}</h3>
-                  </div>
+                  <Link key={recipe.id} href={`/search/${recipe.id}`} passHref>
+                    <RecipeCard recipe={recipe} />
+                  </Link>
                 ))}
               </div>
             ) : (
-              <p className="text-center">
-                No recipes found. Try a different search!
-              </p>
+              <p className="text-center">Loading...</p>
             )
           ) : null}
         </div>

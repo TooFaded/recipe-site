@@ -1,12 +1,9 @@
 import "./globals.css";
 
-export default function RootLayout({ children, modal }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        {children}
-        {/* {modal} */}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
