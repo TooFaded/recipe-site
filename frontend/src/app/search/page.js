@@ -7,6 +7,9 @@ import NavbarComponent from "@/ui/navbar";
 import FooterComponent from "@/ui/footer";
 import SearchBar from "@/ui/searchBar";
 
+import Loading from "./loading";
+import LoadingSpinner from "@/ui/loadingSpinner";
+
 export default function Search() {
   const [recipes, setRecipes] = useState([]);
   const [hasSearched, setHasSearched] = useState(false);
@@ -55,7 +58,7 @@ export default function Search() {
                 ))}
               </div>
             ) : (
-              <p className="text-center">Loading...</p>
+              <LoadingSpinner />
             )
           ) : null}
         </div>

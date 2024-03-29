@@ -53,7 +53,6 @@ export default function RecipeCard({ recipe }) {
         <FaRegClock className="mr-2" />
         <span>{recipe.readyInMinutes} minutes</span>
       </div>
-      {/* Add more recipe details here */}
     </div>
   );
 }
