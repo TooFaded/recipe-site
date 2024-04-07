@@ -21,9 +21,9 @@ export default async function RecipeInstructions({ params }) {
   return (
     <>
       <NavbarComponent />
-      <div className="bg-white-400 flex flex-col justify-center container mx-auto pt-4 pb-10 max-w-7xl px-4 mb-[12rem]">
+      <div className="bg-white-400 flex flex-col justify-center container mx-auto pt-4 pb-10 max-w-full px-4 mb-[12rem]">
         <BackButton />
-        <div className="prose flex items-center justify-between flex-col sm:px-20 px-10 lg:prose-xl max-w-none bg-white shadow rounded-lg p-6">
+        <div className="prose flex items-center justify-between flex-col sm:px-2 px-10 max-w-none bg-white shadow rounded-lg p-6">
           <h1
             className={`${pacifico.className} text-4xl md:text-5xl font-bold text-gray-800 mb-6 text-center drop-shadow-lg`}
           >
@@ -33,12 +33,12 @@ export default async function RecipeInstructions({ params }) {
             <Image
               src={recipe.image}
               alt={recipe.title}
-              width={600}
-              height={600}
+              width={500}
+              height={200}
               style={{
-                objectFit: "cover",
+                objectFit: "fill",
               }}
-              className="transition-transform duration-500 hover:scale-105 rounded-md"
+              className="transition-transform duration-500 hover:scale-105 rounded-xl"
             />
             <div className="ml-4">
               <div className="text-center">
@@ -46,7 +46,7 @@ export default async function RecipeInstructions({ params }) {
                   Ingredients
                 </h2>
               </div>
-              <ul className="marker:text-black list-disc pl-5 mb-4 bg-yellow-100 rounded-lg p-1">
+              <ul className="marker:text-black list-disc pl-6 ml-2 mb-4 bg-yellow-100 rounded-lg p-4">
                 {recipe.extendedIngredients.map((ingredient, index) => (
                   <li key={index} className={`${lato.className} `}>
                     {renderIngredient(ingredient)}
@@ -60,10 +60,18 @@ export default async function RecipeInstructions({ params }) {
           </h2>
 
           <div
-            className="sm:text-lg text-base  h-fit max-w-none bg-white shadow rounded-lg sm:p-4 p-0"
+            className="sm:text-lg text-base lg:prose-xl h-fit max-w-none bg-white shadow rounded-lg mx-auto sm:p-10 sm:px-32 p-4"
             dangerouslySetInnerHTML={{ __html: sanitizedInstructions }}
           />
-          <p className="p-4">Ready in {recipe.readyInMinutes} mins</p>
+          <div>
+            <p className="p-4">
+              Ready in{" "}
+              {recipe.readyInMinutes >= 60
+                ? `${Math.floor(recipe.readyInMinutes / 60)} hr `
+                : ""}
+              {`${recipe.readyInMinutes % 60} mins`}
+            </p>
+          </div>
         </div>
       </div>
       <FooterComponent />

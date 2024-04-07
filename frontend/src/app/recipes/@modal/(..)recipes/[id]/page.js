@@ -30,7 +30,7 @@ export default async function Modal({ params }) {
           </div>
           <div className="p-4 md:p-8 ">
             <h1
-              className={`${lato.className} sm:text-xl text-base md:text-3xl font-bold mb-4`}
+              className={`${lato.className} sm:text-xl text-center text-base md:text-3xl font-bold mb-4`}
             >
               {recipe.title}
             </h1>

@@ -51,7 +51,12 @@ export default function RecipeCard({ recipe }) {
 
       <div className="flex items-center mt-1">
         <FaRegClock className="mr-2" />
-        <span>{recipe.readyInMinutes} minutes</span>
+        <span>
+          {recipe.readyInMinutes >= 60
+            ? `${Math.floor(recipe.readyInMinutes / 60)} hr `
+            : ""}
+          {`${recipe.readyInMinutes % 60} mins`}
+        </span>
       </div>
     </div>
   );
